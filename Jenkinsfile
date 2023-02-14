@@ -34,7 +34,7 @@ pipeline {
 
     stage('Deploy') {
       when {
-//         branch 'dev'
+        branch 'dev'
         branch 'master'
       }
       steps {
