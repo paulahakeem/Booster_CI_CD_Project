@@ -20,6 +20,6 @@ jobs:
 
     - name: Run Tests
       run: |
-        docker build . -f Dockerfile -t shrouk20180287/django-app:v1.0
+        docker build . -f Dockerfile -t paulahakeem/django-app:v1.0
         docker login -u ${{ secrets.DOCKERHUB_USERNAME }} -p ${{ secrets.DOCKERHUB_TOKEN }}
-        docker push shrouk20180287/django-app:v1.0
+        docker push paulahakeem/django-app:v1.0
