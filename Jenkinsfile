@@ -10,8 +10,8 @@ pipeline {
 
     stage('Build image') {
       when {
-        branch 'dev'
-        branch 'master'
+//         branch 'dev'
+        branch 'main'
       }
       steps {
         sh 'docker build -t my_django_app:v1 .'
@@ -20,8 +20,8 @@ pipeline {
 
     stage('Push image') {
       when {
-        branch 'dev'
-        branch 'master'
+//         branch 'dev'
+        branch 'main'
       }
       steps {
         withCredentials([usernamePassword(credentialsId: 'DOCKERHUB', usernameVariable: 'my_user', passwordVariable: 'my_pass')]) {
