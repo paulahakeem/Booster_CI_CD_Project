@@ -16,6 +16,6 @@ jobs:
 
     - name: Run Tests
       run: |
-        docker build . -f finalprojectimage -t paulahakeem/finalprojectimage:v1.0
+        docker build . -f finalprojectimage -t paulahakeem/finalprojectimage:v2.0
         docker login -u ${{ secrets.DOCKERHUB_USERNAME }} -p ${{ secrets.DOCKERHUB_PASSWD }}
         docker push paulahakeem/finalprojectimage:v1.0
